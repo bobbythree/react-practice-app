@@ -1,34 +1,43 @@
 import Card from "./Card";
-import profilePic from '../assets/images/profilePic.png'
+import dev from '../assets/images/dev.png'
+import dog from '../assets/images/dog.png'
+import astronaut from '../assets/images/astronaut.png'
+
 
 
 export default function BioCards() {
-  
+  const bios = [
+    {
+      id: 1,
+      title: 'Bobby Three',
+      subtitle: 'Software Developer',
+      img: dev,
+      alt: 'picture of a software dev'
+    },
+    {
+      id: 2,
+      title: 'Gustavo Fluffybutt',
+      subtitle: 'Dog',
+      img: dog,
+      alt: 'picture of a dog'
+    },{
+      id: 3,
+      title: 'Rocketman Jim',
+      subtitle: 'Astronaut',
+      img: astronaut,
+      alt: 'picture of an astronaut'
+    }
+  ]
 
   return (
     <section className="flex justify-around p-15 bg-cyan-900">
-      <Card>
-        <div className="bg-slate-400 w-52 flex flex-col items-center p-4 rounded-lg">
-          <img src={profilePic} alt="profile pic" className="w-44" />
-          <h2 className="p-2 font-bold">Bobby Three</h2>
-          <p>Software Developer</p>
-        </div>
-      </Card>
-      <Card>
-        <div className="bg-slate-400 w-52 flex flex-col items-center p-4 rounded-lg">
-          <img src={profilePic} alt="profile pic" className="w-44" />
-          <h2 className="p-2 font-bold">Bobby Three</h2>
-          <p>Software Developer</p>
-        </div>
-      </Card>
-      <Card>
-        <div className="bg-slate-400 w-52 flex flex-col items-center p-4 rounded-lg">
-          <img src={profilePic} alt="profile pic" className="w-44" />
-          <h2 className="p-2 font-bold">Bobby Three</h2>
-          <p>Software Developer</p>
-        </div>
-      </Card>
-    </section>
-      
+      {bios.map(bio => (
+        <Card>
+          <img src={bio.img} alt={bio.alt} key={bio.id} className="w-44" />
+          <h2 className="p-4 font-bold">{bio.title}</h2>
+          <p>{bio.subtitle}</p>        
+        </Card>
+      ))}
+    </section>      
   );
 }
