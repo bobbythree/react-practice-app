@@ -15,7 +15,7 @@ export default function Navbar() {
           <a href={link.href} key={link.id}>{link.title}</a>
         ))}
       <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn mb-1 bg-orange-300 text-slate-800">CTA</div>
+      <div tabIndex={0} role="button" className="btn mb-1 bg-red-800 text-slate-300">CTA</div>
         <ul tabIndex={0} className="dropdown-content menu bg-slate-600 rounded-box z-1 w-52 p-2 shadow-sm">
           <li className="text-slate-200"><a>Item 1</a></li>
           <li className="text-slate-200"><a>Item 2</a></li>
