@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "Bobby Three",
+    "subtitle": "Software Developer",
+    "description": "sdf sadf asdf sadf sdaf sad sad sadf sdf sad sadf sadf sd asdf sdf sadf",
+    "img": "src/assets/images/dev.png",
+    "alt": "picture of a software dev"
+  },
+  {
+    "id": 2,
+    "title": "Gustavo Fluffybutt",
+    "subtitle": "Dog",
+    "description": "sdf sadf asdf sadf sdaf sad sad sadf sdf sad sadf sadf sd asdf sdf sadf",
+    "img": "src/assets/images/dog.png",
+    "alt": "picture of a dog"
+  },{
+    "id": 3,
+    "title": "Rocketman Jim",
+    "subtitle": "Astronaut",
+    "description": "sdf sadf asdf sadf sdaf sad sad sadf sdf sad sadf sadf sd asdf sdf sadf",
+    "img": "src/assets/images/astronaut.png",
+    "alt": "picture of an astronaut"
+  }
+]

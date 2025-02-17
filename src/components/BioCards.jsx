@@ -1,39 +1,9 @@
 import { useState } from "react";
 import Card from "./Card";
-import dev from '../assets/images/dev.png'
-import dog from '../assets/images/dog.png'
-import astronaut from '../assets/images/astronaut.png'
-
-
+import bios from '../bios.json'
 
 export default function BioCards() {
   const [showMore, setShowMore] = useState(false);
-
-  const bios = [
-    {
-      id: 1,
-      title: 'Bobby Three',
-      subtitle: 'Software Developer',
-      description: 'sdf sadf asdf sadf sdaf sad sad sadf sdf sad sadf sadf sd asdf sdf sadf',
-      img: dev,
-      alt: 'picture of a software dev'
-    },
-    {
-      id: 2,
-      title: 'Gustavo Fluffybutt',
-      subtitle: 'Dog',
-      description: 'sdf sadf asdf sadf sdaf sad sad sadf sdf sad sadf sadf sd asdf sdf sadf',
-      img: dog,
-      alt: 'picture of a dog'
-    },{
-      id: 3,
-      title: 'Rocketman Jim',
-      subtitle: 'Astronaut',
-      description: 'sdf sadf asdf sadf sdaf sad sad sadf sdf sad sadf sadf sd asdf sdf sadf',
-      img: astronaut,
-      alt: 'picture of an astronaut'
-    }
-  ]
 
   const handleToggleExpand = (id) => {
     setShowMore(prev => ({
