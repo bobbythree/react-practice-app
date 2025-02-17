@@ -43,7 +43,7 @@ export default function BioCards() {
   };
 
   return (
-    <section className="flex justify-around p-15 bg-cyan-900">
+    <section className="flex justify-around p-15 bg-base-200">
       {bios.map(bio => {
         const isExpanded = showMore[bio.id] || false; // Check if *this* card is expanded
         const displayedDescription = isExpanded ? bio.description : bio.description.substring(0, 40) + "...";

@@ -4,3 +4,7 @@
 body {
   color: rgb(27, 27, 27);
 }
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, retro;
+}

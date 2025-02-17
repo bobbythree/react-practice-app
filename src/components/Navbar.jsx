@@ -1,27 +1,25 @@
 export default function Navbar({logo="dudeman"}) {
-  const links = [
-    {id: 1, title: 'about', href: '/'},
-    {id: 2, title: 'blog', href: '/'},
-    {id: 3, title: 'contact', href: '/'},
-
-  ];
+  
 
   return (
-    <nav className=
-    "flex justify-around p-5 bg-slate-200">
-      <h3 className="mr-100 font-bold">{logo}</h3>
-      <div className="flex gap-15">
-        {links.map((link) => (
-          <a href={link.href} key={link.id}>{link.title}</a>
-        ))}
-      <div className="dropdown dropdown-hover">
-      <div tabIndex={0} role="button" className="btn mb-1 bg-red-800 text-slate-300">CTA</div>
-        <ul tabIndex={0} className="dropdown-content menu bg-slate-600 rounded-box z-1 w-52 p-2 shadow-sm">
-          <li className="text-slate-200"><a>call to action 01</a></li>
-          <li className="text-slate-200"><a>call to action 02</a></li>
+    <div className="navbar bg-base-100 shadow-sm">
+      <div className="flex-1">
+        <a className="btn btn-ghost text-xl ml-30">{logo}</a>
+      </div>
+      <div className="flex-none pr-30">
+        <ul className="menu menu-horizontal">
+          <li><a>Link</a></li>
+          <li>
+            <details>
+              <summary>Parent</summary>
+              <ul className="bg-base-100 rounded-t-none p-2">
+                <li><a>Link 1</a></li>
+                <li><a>Link 2</a></li>
+              </ul>
+            </details>
+          </li>
         </ul>
       </div>
-      </div>
-    </nav>
+    </div>
   );
 }
